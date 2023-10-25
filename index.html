@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>BotCraft: The Discord Bot Generator</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>BotCraft: The Discord Bot Generator</h1>
+    </header>
+
+    <section id="bot-settings">
+        <h2>Bot Settings</h2>
+        <form id="bot-form">
+            <label for="bot-token">Bot Token:</label>
+            <input type="text" id="bot-token" required>
+
+            <label for="bot-prefix">Bot Prefix:</label>
+            <input type="text" id="bot-prefix" required>
+
+            <button type="button" id="save-settings">Save Settings</button>
+        </form>
+    </section>
+
+    <section id="if-x-is-said">
+        <h2>If X is Said:</h2>
+        <form id="if-x-form">
+            <label for="trigger-text">Trigger Text:</label>
+            <input type="text" id="trigger-text" required>
+
+            <label for="response-text">Response Text:</label>
+            <input type="text" id="response-text" required>
+
+            <button type="button" id="add-if-x">Add If X Command</button>
+        </form>
+    </section>
+
+    <section id="say-x">
+        <h2>Say X:</h2>
+        <form id="say-x-form">
+            <label for="say-text">Say Text:</label>
+            <input type="text" id="say-text" required>
+
+            <label for="last-event">Only if Last Event:</label>
+            <select id="last-event">
+                <option value="none">No restriction</option>
+                <option value="trigger">Triggered</option>
+            </select>
+
+            <button type="button" id="add-say-x">Add Say X Command</button>
+        </form>
+    </section>
+
+    <section id="do-action">
+        <h2>Do Action:</h2>
+        <form id="do-action-form">
+            <label for="action-type">Action Type:</label>
+            <select id="action-type">
+                <option value="none">No action</option>
+                <option value="say">Say Text</option>
+                <option value="ban">Ban Member</option>
+                <option value="kick">Kick Member</option>
+                <option value="dm">Send DM</option>
+                <option value="delete">Delete Message</option>
+            </select>
+
+            <label for="action-text">Action Text:</label>
+            <input type="text" id="action-text" required>
+
+            <button type="button" id="add-action">Add Action</button>
+        </form>
+    </section>
+
+    <section id="bot-commands">
+        <h2>Bot Commands</h2>
+        <ul id="command-list">
+            <!-- This is where the list of commands will be displayed -->
+        </ul>
+    </section>
+
+    <section id="bot-code">
+        <h2>Generated Bot Code (Python):</h2>
+        <pre id="generated-code"></pre>
+        <button type="button" id="generate-code">Generate Bot Code</button>
+    </section>
+
+    <script src="script.js"></script>
+</body>
+</html>
+
